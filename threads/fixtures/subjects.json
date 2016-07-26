@@ -1,0 +1,30 @@
+[
+{
+    "model": "threads.subject",
+    "pk": 1,
+    "fields": {
+        "name": "Test Subject",
+        "description": "<p>The subject aims to verify the working of <em><strong>threads and polls</strong></em></p>"
+    }
+},
+{
+    "model": "threads.thread",
+    "pk": 1,
+    "fields": {
+        "name": "First Thread with Poll",
+        "user": 1,
+        "subject": 1,
+        "created_at": "2016-07-26T10:00:34.141Z"
+    }
+},
+{
+    "model": "threads.posts",
+    "pk": 1,
+    "fields": {
+        "thread": 1,
+        "comment": "<p style=\"text-align: center;\"><strong>Test Thread </strong></p>\r\n<p>Just a test thread to ensure everything works perfect.</p>",
+        "user": 1,
+        "created_at": "2016-07-26T10:00:34.142Z"
+    }
+}
+]

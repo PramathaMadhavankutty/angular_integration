@@ -3,7 +3,6 @@ from .models import PollSubject, Poll, Vote
 from threads.models import Thread
 
 
-
 class VoteSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -30,7 +29,6 @@ class PollSerializer(serializers.ModelSerializer):
     user_has_voted = serializers.SerializerMethodField()
     total_votes = serializers.SerializerMethodField()
 
-
     class Meta:
         model = Poll
         fields = ('id', 'thread', 'question', 'subjects', 'user_has_voted', 'total_votes')
@@ -52,7 +50,6 @@ class PollSerializer(serializers.ModelSerializer):
             has_voted = True
 
         return has_voted
-
 
     def get_total_votes(self, poll):
         return poll.votes.count()

@@ -4,7 +4,7 @@
           <div class="panel-heading"><strong>Poll - {$ poll.question $} (Total of {$ poll.total_votes $} votes so far)</strong></div>
           <div class="panel-body">
           <p>Here’s how the votes are so far:</p>
-              <p ng-if="poll.user_has_voted == false"><h5>Make sure you're <b>logged in</b> then poll</h5></p>
+              <span ng-if="poll.user_has_voted == false"><h5>Make your poll</h5></span>
           <div ng-repeat="subject in poll.subjects">
               <div class="col-md-9">
                 <strong>{$ subject.name $}</strong>
